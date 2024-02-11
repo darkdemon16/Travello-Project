@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block title %}
+            Tours | Spots
+{% endblock %}
+{% block body %}
+<div class="products" id="Products" class="col-md-9 mt-3 p-3">
+    <h1>International</h1>
+    <div class="box">
+        {% for x in ispots %}
+        <div class="card" class="col-md-4">
+
+            <div class="small_card">
+                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-share"></i>
+            </div>
+
+            <div class="image">
+                <img src="{{x.iimage.url}}">
+            </div>
+
+            <div class="products_text">
+                <h2>{{x.ispot_name}}</h2>
+                <p>
+                    
+                </p>
+                <h3>{{x.iprice}}</h3>
+                <div class="products_star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <a href="spotdetails1/{{x.ispot_id}}" class="btn">View Details</a>
+            </div>
+
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

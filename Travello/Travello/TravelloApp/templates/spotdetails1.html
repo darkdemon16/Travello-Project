@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}
+            Amzaon | Products Detail
+{% endblock %}
+{% block body %}
+    <div class="col-md-4 mt-4 p-4">
+        <img src="{{ispots.iimage.url}}" class="card-img-top" alt="" style="height: 300px; width: 40%;">
+    </div>
+    <div class="col-md-4 mt-4 p-4">
+        <div class="card-body">
+            <h5 class="card-title" style="font-size: 50px;">{{ispots.ispot_name}}</h5>
+            <p class="card-text">Decscription {{ispots.idesc}}</p>
+            <p class="card-text">Price {{ispots.iprice}}</p>
+          </div>
+        <a href="{% url 'passenger_detail' %}"><button type="submit" class="btn btn-warning">Book Now</button></a>
+        <a href="/"><button type="submit" class="btn btn-warning">Back</button></a>
+    </div>
+{% endblock %}

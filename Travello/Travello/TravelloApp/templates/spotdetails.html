@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}
+            Amzaon | Products Detail
+{% endblock %}
+{% block body %}
+<div class="hedi" id="Hedi">
+    <h1>Customer's<span>review</span></h1>
+</div>
+    <div class="col-md-4 mt-4 p-4">
+        <img src="{{nspots.nimage.url}}" class="card-img-top" alt="" style="height: 300px; width:40%;">
+    </div>
+    <div class="col-md-4 mt-4 p-4">
+        <div class="card-body">
+            <h5 class="card-title" style="font-size: 40px;">{{nspots.nspot_name}}</h5>
+           <div> <p class="card-text">Decscription {{nspots.ndesc}}</p><br></div>
+            <p class="card-text">Price {{nspots.nprice}}</p>
+          </div>
+        <a href="/passenger_detail"><button type="submit" class="btn btn-warning">Book Now</button></a>
+        <a href="/"><button type="submit" class="btn btn-warning">Back</button></a>
+    </div>
+{% endblock %}
